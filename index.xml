@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://spiritcai.github.io/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Dec 2019 18:57:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://spiritcai.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CC的Blog</title>
+      <link>https://spiritcai.github.io/post/blog/</link>
+      <pubDate>Mon, 09 Dec 2019 18:57:56 +0800</pubDate>
+      
+      <guid>https://spiritcai.github.io/post/blog/</guid>
+      <description>路由汇总： BGP在任何一台设备都可以汇总 agg [汇总路由] [汇总掩码] BGP默认会把汇总和明细都发出去 agg [汇总的路由] [汇总的掩码] summary-only 在汇总路由的设备上产生s&amp;gt;,把其他条目抑制了，本地生成的东西会丢失as号 agg [汇总的路由] [汇总的掩码] summary-only as-set 这样的汇总会携带as号，不会环路 agg [汇总的路由] [汇总的掩码] summary-only as-set attribute-map [route-map名] route-map zj per 10 set metric 50 bgp过载保护： nei 2.2.2.2 maximum-prefix 3 50 warning-only/restart 监控R2传给自己的条目，为3条，如果超过50%，就执行什么动作 社团属性： 主要来控制路由的传播范围 社团属性，也叫共同体属性，属于可选传递属性 可选：就是BGP所有邻居有可能不识别这个属性 社团属性类似于tag标记，它允许一个路由器可以用可以用标签指示来标记路由，并且允许其他路由根据这个标记对路由进行处理 并且允许打上多个标记 社团属性分两种： 1.well-know communities 公认团体 2.private communities 私有团体 社团属性预分类好了3类well-know属性： no-advertise：携带这个的不会给任何bgp邻居，也就是只穿达给一个邻居 no-export：携带这个的不会传出as，只会给IBGP邻居 local-as：携带这个的不会传出小as 默认情况下社团属性不会传给邻居，所以必须有一下命令： (config-router) nei 1.1.1.1 send-com 只会传给1.1.1.1这个邻居，并且只在他身上生效，默认不会继续传递 发送方 acce 1 per 33.3.3.0 route-map zj per 10 mat ip add 1 set community 4:22</description>
+    </item>
+    
+  </channel>
+</rss>
